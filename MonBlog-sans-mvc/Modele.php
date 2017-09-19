@@ -4,12 +4,15 @@
 function getBillets() {
 	$bdd = getBdd();
 	$billets = $bdd->prepare('select BIL_ID as id, BIL_DATE as date,' . ' BIL_TITRE as titre, BIL_CONTENU as contenu from T_BILLET' . ' order by BIL_ID desc');
-	$billet->execute(array($idBillet));
+	return $billets;
+	/*
+	  
+	 $billet->execute(array($idBillet));
 	if ($billet->rowCount() == 1)
 		return $billet->fetch();  // Accès à la première ligne de résultat
 	else
 		throw new Exception("Aucun billet ne correspond à l'identifiant '$idBillet'");
-
+    */
 }
 
 // Renvoie la liste des commentaires associés à un billet

@@ -8,6 +8,6 @@ function getBillets() {
 }
 
 function getBdd(){
-	$bdd = new PDO('mysql:host=localhost;dbname=mvcBlog;charset=utf8', 'ts2', 'ts2');
+	$bdd = new PDO('mysql:host=localhost;dbname=mvcBlog;charset=utf8', 'ts2', 'ts2', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 	return $bdd;
 }

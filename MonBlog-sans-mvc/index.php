@@ -1,11 +1,6 @@
 <?php
-	require 'Modele.php';
-	
-	try {
-		$billets = getBillets();
-		require 'vueAccueil.php';
-	}
-	catch (Exception $e) {
-		echo '<html><body>Erreur ! ' . $e->getMessage();
-		require 'vueErreur.php';
-	}
+require 'Modele.php';
+
+$billets = getBillets();
+
+require 'vueAccueil.php';
